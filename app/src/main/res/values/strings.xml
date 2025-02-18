@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">БегунОк</string>
+    <string name="begunok_ver_3_0">Ракета</string>
+    <string name="begunok_ver_3_1">Комета</string>
+    <string name="devices">Устройства</string>
+    <string name="map">Карта</string>
+    <string name="dark">Темная</string>
+    <string name="light">Светлая</string>
+    <string name="system">Как в системе</string>
+    <string name="nfc">NFC</string>
+    <string name="scan_qr_code">Отсканировать QR код</string>
+    <string name="qr_code_not_found">QR код не найден</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="cancel">Отмена</string>
+    <string name="connect_name">Подключение</string>
+    <string name="devices_name">Устройства</string>
+    <string name="map_name">Карта</string>
+    <string name="settings_name">Настройки</string>
+    <string name="device_changing">Редактирование устройства</string>
+    <string name="default_value_device">Оставить значения по умолчанию</string>
+    <string name="it_is_exist_already">Ранее подключенное устройство</string>
+    <string name="qr_non_begunok_device">QR не корректен, попробуйте ещё раз</string>
+    <string name="scan_text">Отсканируйте QR в инструкции к устройству</string>
+    <string name="you">(Вы)</string>
+</resources>
