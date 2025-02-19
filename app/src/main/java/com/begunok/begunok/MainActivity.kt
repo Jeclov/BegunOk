@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            BegunOkTheme {
+            BegunOkTheme(darkTheme = false) {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {

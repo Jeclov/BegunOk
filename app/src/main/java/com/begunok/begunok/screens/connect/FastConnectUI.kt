@@ -1,5 +1,6 @@
 package com.begunok.begunok.screens.connect
 
+import android.graphics.drawable.shapes.Shape
 import androidx.activity.result.ActivityResultLauncher
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -11,12 +12,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -25,6 +29,7 @@ import com.begunok.begunok.MainActivity
 import com.begunok.begunok.R
 import com.begunok.begunok.add.item.fast.qrcode.ScanClass
 import com.begunok.begunok.data.db.MainDb
+import com.begunok.begunok.ui.theme.MainCl
 import com.journeyapps.barcodescanner.ScanOptions
 
 @Composable
@@ -52,7 +57,14 @@ fun FastConnectUI(bleItemsDb: MainDb, context: MainActivity, scanLauncher: Activ
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
-            onClick = {}, shape = RoundedCornerShape(8.dp)
+            onClick = {},
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonColors(
+                containerColor = MainCl,
+                contentColor = Color.White,
+                disabledContainerColor = MainCl,
+                disabledContentColor = Color.White
+            )
         ) {
             Row(
                 horizontalArrangement = Arrangement.SpaceEvenly,
@@ -70,7 +82,14 @@ fun FastConnectUI(bleItemsDb: MainDb, context: MainActivity, scanLauncher: Activ
             onClick = {
                 ScanClass(context, bleItemsDb).scan(scanLauncher)
 
-            }, shape = RoundedCornerShape(8.dp)
+            },
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonColors(
+                containerColor = MainCl,
+                contentColor = Color.White,
+                disabledContainerColor = MainCl,
+                disabledContentColor = Color.White
+            )
         ) {
             Row(
                 horizontalArrangement = Arrangement.SpaceEvenly,

@@ -35,7 +35,7 @@ fun MapUI(pav: PaddingValues) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = stringResource(R.string.map), fontSize = 30.sp, color = MainCl)
+            Text(text = "В разработке", fontSize = 30.sp, color = MainCl)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.begunok.begunok.screens.devices
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -62,11 +64,35 @@ fun DevicesUI(
                 if (bleItemMain != null) {
                     BleItemCard(bleItemMain, navigationController)
                 } else {
-                    Text(
-                        modifier = Modifier.fillMaxWidth(),
-                        text = "Нет главного устройства",
-                        textAlign = TextAlign.Center
-                    )
+                    Card(
+                        modifier = Modifier
+                            .padding(10.dp)
+                            .fillMaxWidth(),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(10.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.begunok_logo),
+                                contentDescription = null,
+                                modifier = Modifier.size(50.dp)
+                            )
+
+                            Spacer(modifier = Modifier.width(10.dp))
+
+                            Column(
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Text(
+                                    text = "Нет главного устройства",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    color = Color.Gray // Можно изменить цвет текста
+                                )
+                            }
+                        }
+                    }
                 }
                 Spacer(modifier = Modifier.height(40.dp))
             }
